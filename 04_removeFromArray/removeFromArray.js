@@ -1,13 +1,11 @@
-const removeFromArray = function(array,...element) {
-    let helperArray = [];
-    for(let i=0; i<array.length;i++){
-        if(array[i]!=element){
-            helperArray[i] = array[i];
+const removeFromArray = function (arr, ...elements) {
+    for(el of elements){
+        let index = arr.indexOf(el)
+        if(index>-1){
+            arr.splice(index,1)
         }
     }
-    array = helperArray;
-    return array
-
+    return arr
 };
 
 // Do not edit below this line
